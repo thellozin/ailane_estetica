@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <form onsubmit="enviarParaWhatsapp(); return false;">
+  <label>Nome:</label>
+  <input type="text" id="nome" required><br>
+
+  <label>Data:</label>
+  <input type="date" id="data" required><br>
+
+  <label>Horário:</label>
+  <select id="horario" required>
+    <option value="">Selecione um horário</option>
+    <option>08:00</option>
+    <option>10:00</option>
+    <option>13:00</option>
+    <option>15:00</option>
+    <option>17:00</option>
+  </select><br>
+
+  <label>Modelo de trança:</label>
+  <input type="text" id="modelo" required><br>
+
+  <label>Telefone:</label>
+  <input type="tel" id="telefone" required><br>
+
+  <button type="submit">Agendar</button>
+</form>
+
+
+
+
+
+    <a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp">
+        <img src="/img/whatsapp_logo.png" target="_blank" alt="WhatsApp" />
+    </a>
+
+</body>
+
+</html>

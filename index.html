@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transista Profissional</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Braids Monique</div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="hero">
+  <div class="overlay">
+    <div class="hero-content">
+      <h1>Tranças que valorizam sua beleza</h1>
+      <p>Especialista em tranças afro e estilos personalizados, feitos com dedicação e amor.</p>
+      <p>Agende agora e realce sua identidade!</p>
+      <a href="#agendamento" class="btn">Agendar Trança</a>
+    </div>
+  </div>
+</div>
+  <!-- Sobre a transista -->
+  <section class="sobre">
+    <div class="sobre-container">
+      <div class="sobre-texto">
+        <h2>Sobre Mim</h2>
+        <p>
+          Olá! Sou a <strong>Monique</strong>, especialista em tranças afro há mais de <strong>8 anos</strong>.
+          Acredito que cada trança é uma obra de arte única, feita com dedicação, técnica e muito amor.
+        </p>
+        <p>
+          Meu trabalho vai além da estética: é sobre autoestima, ancestralidade e empoderamento.
+          Atendo com cuidado e profissionalismo, buscando sempre realçar a beleza natural de cada cliente.
+        </p>
+      </div>
+      <div class="sobre-imagem">
+        <img src="/img/trancas/tranca1.png" alt="Foto da transista Evelyn">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Portfólio -->
+  <section class="portfolio">
+    <div class="portfolio-header">
+      <h2>Portfólio</h2>
+      <a href="/pages/galeria.html" target="_blank" class="btn-vermais">Ver mais</a>
+    </div>
+
+    <div class="galeria">
+      <img src="/img/trancas/tranca1.png" alt="Trança 1">
+      <img src="/img/trancas/tranca1.png"" alt=" Trança 2">
+      <img src="/img/trancas/tranca1.png"" alt=" Trança 3">
+    </div>
+  </section>
+
+  <!-- Agendamento -->
+  <section class="agendamento" id="agendamento">
+    <div class="agendamento-container">
+      <h2>Agende sua Trança</h2>
+      <form onsubmit="enviarParaWhatsapp(); return false;">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required />
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" required />
+        <p id="mensagem-data" class="mensagem-erro" style="display: none;"></p>
+
+        <label for="horario">Horário:</label>
+        <select id="horario" required>
+          <option value="">Selecione um horário</option>
+          <option>08:00</option>
+          <option>10:00</option>
+          <option>13:00</option>
+          <option>15:00</option>
+          <option>17:00</option>
+        </select>
+
+        <label for="modelo">Modelo de Trança:</label>
+        <input type="text" id="modelo" required />
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" required />
+
+         <label for="pagamento">Pagamento:</label>
+        <select id="pagamento" required>
+          <option value="">Selecione a forma de pagamento</option>
+          <option>Pix</option>
+          <option>Débito</option>
+          <option>Credito</option>
+          <option>Dinheiro</option>
+   
+        </select>
+
+        <label for="referencia">Foto de Referência (opcional):</label>
+        <input type="file" id="referencia" accept="image/*" />
+        <small>Se voce enviou a foto de referencia, por favor envia-la pelo whatsapp após o agendamento</small>
+
+
+        <button type="submit">Agendar via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+
+
+  <!-- Localização -->
+  <section class="localizacao">
+    <h2>Localização</h2>
+
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.784277842818!2d-51.193456625132725!3d-29.928112025890343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197abd22ff9ea7%3A0xe43406488f4a812e!2sR.%20Afonso%20Pena%2C%20340%20-%20Mato%20Grande%2C%20Canoas%20-%20RS%2C%2092320-050!5e0!3m2!1spt-BR!2sbr!4v1759363308427!5m2!1spt-BR!2sbr" 
+   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+
+  <a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp">
+    <img src="/img/whatsapp_logo.png" target="_blank" alt="WhatsApp" />
+  </a>
+
+
+  <!-- Contato -->
+  <footer class="contato">
+    <h2>Contato</h2>
+    <p>📱 WhatsApp: <a href="https://wa.me/5551985045988" target="_blank">Clique aqui para agendar</a></p>
+    <p>📸 Instagram: <a href="https://instagram.com/braids_monique" target="_blank">Clique aqui para acessar</a></p>
+  </footer>
+
+
+
+
+</body>
+
+<script>
+
+    const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+  // Bloqueia domingos
+  const dataInput = document.getElementById("data");
+  const mensagemData = document.getElementById("mensagem-data");
+
+  dataInput.addEventListener("input", function () {
+    const dataSelecionada = new Date(this.value);
+    const diaSemana = dataSelecionada.getUTCDay(); // 0 = domingo
+
+    if (diaSemana === 0) {
+      mensagemData.textContent = "⚠️ A trancista não atende aos domingos. Por favor, escolha outro dia.";
+      mensagemData.style.display = "block";
+      this.value = "";
+    } else {
+      mensagemData.style.display = "none";
+      mensagemData.textContent = "";
+    }
+  });
+
+  function enviarParaWhatsapp() {
+    const nome = document.getElementById("nome").value;
+    const data = document.getElementById("data").value;
+    const horario = document.getElementById("horario").value;
+    const modelo = document.getElementById("modelo").value;
+    const telefone = document.getElementById("telefone").value;
+    const pagamento = document.getElementById("pagamento").value;
+
+    const numeroTrancista = "5551985045988"; // Substituir pelo número da trancista
+
+    const mensagem = `Olá! Gostaria de agendar uma trança:\n
+Nome: ${nome}
+Data: ${data}
+Horário: ${horario}
+Modelo: ${modelo}
+Telefone: ${telefone}
+Forma de Pagamento: ${pagamento};
+
+📸 Enviarei uma imagem de referência por aqui!`;
+
+    const link = `https://wa.me/${numeroTrancista}?text=${encodeURIComponent(mensagem)}`;
+    window.open(link, "_blank");
+  }
+</script>
+
+
+</html>

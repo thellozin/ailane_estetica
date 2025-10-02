@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curso de Tranças com Evelyn</title>
+  <link rel="stylesheet" href="/css/curso.css" />
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Braids Monique</div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="topo">
+    <h1>Curso de Tranças com Monique</h1>
+    <p>Aprenda a arte das tranças afro com uma especialista de mais de 8 anos de experiência!</p>
+    <a href="#agendamento" class="botao-inscricao">Inscreva-se via WhatsApp</a>
+  </section>
+
+  <main>
+    <section class="video">
+      <h2>Assista ao vídeo de apresentação</h2>
+      <video controls>
+        <source src="video-curso.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+    </section>
+
+    <section class="descricao" id="sobre">
+      <h2>O que você vai aprender</h2>
+      <p>Esse curso é voltado para iniciantes e para quem deseja aperfeiçoar suas técnicas. Aprenda desde o básico até tranças elaboradas, com foco na valorização da cultura afro.</p>
+    </section>
+
+    <section class="valor">
+      <h2>Valor</h2>
+      <p>💰 Valor do curso: <strong>R$ 00,00</strong></p>
+    </section>
+
+    <section class="depoimentos">
+      <h2>Depoimentos de Alunas</h2>
+      <div class="depoimento">
+        <p>"A Evelyn é maravilhosa! Aprendi muito mais do que esperava."</p>
+        <span>– Juliana R.</span>
+      </div>
+      <div class="depoimento">
+        <p>"Hoje consigo atender minhas próprias clientes graças a esse curso."</p>
+        <span>– Camila S.</span>
+      </div>
+    </section>
+
+    <section class="galeria" id="portfolio">
+      <div class="portfolio-header">
+        <h2>Galeria de Resultados</h2>
+        <a href="/pages/galeria.html" target="_blank" class="btn-vermais">Mostrar mais</a>
+      </div>
+      <div class="galeria-imagens">
+        <img src="/img/trancas/tranca1.png" alt="Trança 1" />
+        <img src="/img/trancas/tranca1.png" alt="Trança 2" />
+        <img src="/img/trancas/tranca1.png" alt="Trança 3" />
+      </div>
+    </section>
+
+    <section class="faq" id="contato">
+      <h2>Perguntas Frequentes</h2>
+      <details>
+        <summary>O curso é 100% presencial?</summary>
+        <p>Sim.</p>
+      </details>
+      <details>
+        <summary>Tem certificado?</summary>
+        <p>Sim! Após a conclusão você recebe um certificado.</p>
+      </details>
+      <details>
+        <summary>Quanto tempo dura o curso?</summary>
+        <p>O curso dura por bla bla bla.</p>
+      </details>
+    </section>
+
+    <section class="mapa">
+      <h2>Local do Curso</h2>
+      <p>O curso será realizado no endereço abaixo. Confira no mapa:</p>
+      <div class="mapa-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.917870081052!2d-51.168420724668255!3d-30.032499028195222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95199d2f373a14f1%3A0x870da4eb35279e8f!2sCentro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090000-000!5e0!3m2!1spt-BR!2sbr!4v1690211518179!5m2!1spt-BR!2sbr"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+   <!-- Agendamento -->
+  <section class="agendamento" id="agendamento">
+    <div class="agendamento-container">
+      <h2>Assine o Curso</h2>
+      <form onsubmit="enviarParaWhatsapp(); return false;">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required />
+
+        <label for="turno">Turno:</label>
+        <select id="turno" required>
+          <option value="">Selecione o Turno</option>
+          <option>Manhã</option>
+          <option>Tarde</option>
+        </select>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" required />
+
+        <button type="submit">Encaminhar para o WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <p>&copy; 2025 Curso de Tranças com Monique</p>
+  </footer>
+
+  <script>
+ 
+
+     function enviarParaWhatsapp() {
+    const nome = document.getElementById("nome").value;
+    const turno = document.getElementById("turno").value;
+    const telefone = document.getElementById("telefone").value;
+
+    const numeroTrancista = "5551985045936"; // Substituir pelo número da trancista
+
+    const mensagem = ` Olá, Monique! Quero me inscrever no curso presencial de tranças. Por favor, me envie mais informações. Obrigado(a)! \n
+Nome: ${nome}
+Turno: ${turno}
+Telefone: ${telefone}`;
+
+    const link = `https://wa.me/${numeroTrancista}?text=${encodeURIComponent(mensagem)}`;
+    window.open(link, "_blank");
+  }
+
+    // Menu toggle para mobile
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>
