@@ -20,7 +20,8 @@
 
       <ul class="nav-links" id="nav-links">
         <li><a href="#sobre">Sobre Mim</a></li>
-        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="pages/galeria.html">Galeria</a></li>
+        <li><a href="pages/agendar.html">Agendamento</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
@@ -95,8 +96,8 @@
         <label for="modelo">Modelo de Trança:</label>
         <input type="text" id="modelo" required />
 
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" required />
+        <!-- <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" required /> -->
 
          <label for="pagamento">Pagamento:</label>
         <select id="pagamento" required>
@@ -147,14 +148,15 @@
 </body>
 
 <script>
-
-    const menuToggle = document.getElementById('menu-toggle');
+  // Toggle do menu
+  const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
 
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
-  // Bloqueia domingos
+
+  // Bloqueia domingos no agendamento
   const dataInput = document.getElementById("data");
   const mensagemData = document.getElementById("mensagem-data");
 
@@ -177,20 +179,19 @@
     const data = document.getElementById("data").value;
     const horario = document.getElementById("horario").value;
     const modelo = document.getElementById("modelo").value;
-    const telefone = document.getElementById("telefone").value;
     const pagamento = document.getElementById("pagamento").value;
 
-    const numeroTrancista = "5551985045988"; // Substituir pelo número da trancista
 
-    const mensagem = `Olá! Gostaria de agendar uma trança:\n
+    const numeroTrancista = "5551985045988"; // Substituir pelo número real
+
+    let mensagem = `Olá! Gostaria de agendar uma trança:\n
 Nome: ${nome}
 Data: ${data}
 Horário: ${horario}
 Modelo: ${modelo}
-Telefone: ${telefone}
-Forma de Pagamento: ${pagamento};
+Forma de Pagamento: ${pagamento}`;
 
-📸 Enviarei uma imagem de referência por aqui!`;
+ 
 
     const link = `https://wa.me/${numeroTrancista}?text=${encodeURIComponent(mensagem)}`;
     window.open(link, "_blank");

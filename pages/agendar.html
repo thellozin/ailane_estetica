@@ -1,49 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Trança</title>
+  <link rel="stylesheet" href="../css/agendar.css">
+
 </head>
 
 <body>
 
-    <form onsubmit="enviarParaWhatsapp(); return false;">
-  <label>Nome:</label>
-  <input type="text" id="nome" required><br>
+  
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Braids Monique</div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#sobre">Sobre Mim</a></li>
+        <li><a href="../index.html#portfolio">Portfólio</a></li>
+        <li><a href="../index.html#contato">Contato</a></li>
+        <li><a href="#agendamento">Agendar</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <label>Data:</label>
-  <input type="date" id="data" required><br>
+  <!-- Formulário de Agendamento -->
+  <section class="agendamento">
+    <div class="agendamento-container">
+      <h2>Agende sua Trança</h2>
 
-  <label>Horário:</label>
-  <select id="horario" required>
-    <option value="">Selecione um horário</option>
-    <option>08:00</option>
-    <option>10:00</option>
-    <option>13:00</option>
-    <option>15:00</option>
-    <option>17:00</option>
-  </select><br>
+      <form onsubmit="enviarParaWhatsapp(); return false;">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
 
-  <label>Modelo de trança:</label>
-  <input type="text" id="modelo" required><br>
+        <label for="data">Data:</label>
+        <input type="date" id="data" required>
+        <p id="mensagem-data" class="mensagem-erro" style="display: none;"></p>
 
-  <label>Telefone:</label>
-  <input type="tel" id="telefone" required><br>
+        <label for="horario">Horário:</label>
+        <select id="horario" required>
+          <option value="">Selecione um horário</option>
+          <option>08:00</option>
+          <option>10:00</option>
+          <option>13:00</option>
+          <option>15:00</option>
+          <option>17:00</option>
+        </select>
 
-  <button type="submit">Agendar</button>
-</form>
+        <label for="modelo">Modelo de Trança:</label>
+        <input type="text" id="modelo" required>
+
+        <!-- <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" required> -->
+
+        <label for="pagamento">Pagamento:</label>
+        <select id="pagamento" required>
+          <option value="">Selecione a forma de pagamento</option>
+          <option>Pix</option>
+          <option>Débito</option>
+          <option>Credito</option>
+          <option>Dinheiro</option>
+   
+        </select>
+
+        <label for="referencia">Foto de Referência (opcional):</label>
+        <input type="file" id="referencia" accept="image/*" />
+        <small>Se voce enviou a foto de referencia, por favor envia-la pelo whatsapp após o agendamento</small>
 
 
+        <button type="submit">Agendar via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp">
+    <img src="/img/whatsapp_logo.png" alt="WhatsApp" />
+  </a>
+
+  <script>
+  // Bloqueia domingos
+  const dataInput = document.getElementById("data");
+  const mensagemData = document.getElementById("mensagem-data");
+
+  dataInput.addEventListener("input", function () {
+    const dataSelecionada = new Date(this.value);
+    const diaSemana = dataSelecionada.getUTCDay(); // 0 = domingo
+
+    if (diaSemana === 0) {
+      mensagemData.textContent = "⚠️ A trancista não atende aos domingos. Por favor, escolha outro dia.";
+      mensagemData.style.display = "block";
+      this.value = "";
+    } else {
+      mensagemData.style.display = "none";
+      mensagemData.textContent = "";
+    }
+  });
+
+  function enviarParaWhatsapp() {
+    const nome = document.getElementById("nome").value;
+    const data = document.getElementById("data").value;
+    const horario = document.getElementById("horario").value;
+    const modelo = document.getElementById("modelo").value;
+    const pagamento = document.getElementById("pagamento").value;
+   
+
+    const numeroTrancista = "5551985045988"; // Substituir pelo número real
+
+    let mensagem = `Olá! Gostaria de agendar uma trança:\n\nNome: ${nome}\nData: ${data}\nHorário: ${horario}\nModelo: ${modelo}\nPagamento: ${pagamento}`;
 
 
-
-    <a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp">
-        <img src="/img/whatsapp_logo.png" target="_blank" alt="WhatsApp" />
-    </a>
-
+    const link = `https://wa.me/${numeroTrancista}?text=${encodeURIComponent(mensagem)}`;
+    window.open(link, "_blank");
+  }
+</script>
 </body>
-
 </html>
