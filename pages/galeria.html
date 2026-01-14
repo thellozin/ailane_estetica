@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,28 +8,64 @@
   <link rel="stylesheet" href="/css/galeria.css" />
 </head>
 <header class="header">
-    <nav class="navbar">
-      <div class="logo">Braids Monique</div>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
-        ☰
-      </button>
+  <nav class="navbar">
+    <a href="/index.html" class="logo-link">
+      <span class="logo">Ailane Barbosa</span>
+    </a>
 
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#sobre">Sobre Mim</a></li>
-        <li><a href="#portfolio">Portfólio</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="agendar.html">Agendamento</a></li>
+    </ul>
+
+  </nav>
+</header>
 
 <body>
   <h2 class="titulo-galeria">Galeria de Fotos</h2>
   <div id="container-galeria"></div>
-  <a id="btn-voltar" href="/pages/galeria.html" class="btn-voltar" style="display: none;">← Voltar para Galeria Geral</a>
+  <a id="btn-voltar" href="/pages/galeria.html" class="btn-voltar" style="display: none;">← Voltar para Galeria
+    Geral</a>
   <script src="/js/galeria.js"></script>
 
   <a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp">
     <img src="/img/whatsapp_logo.png" target="_blank" alt="WhatsApp" />
   </a>
+
+
+     <!-- Contato -->
+<footer class="contato">
+  <div class="footer-container">
+    <h2>Contatos</h2>
+
+    <p class="endereco">
+      📍 Rua Botafogo, 886 – Menino Deus<br>
+      Porto Alegre – RS
+    </p>
+
+    <div class="redes">
+      <a href="https://wa.me/55599999999999" target="_blank">WhatsApp: 56565</a>
+      <a href="https://instagram.com/" target="_blank">Instagram: fgfgfg</a>
+      <a href="https://" target="_blank">Gmail: rtyth</a>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    }
+  </script>
 </body>
+
 </html>

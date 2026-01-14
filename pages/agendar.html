@@ -4,42 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agendar Trança</title>
+  <title>Agendar Procedimento</title>
   <link rel="stylesheet" href="../css/agendar.css">
 
 </head>
 
 <body>
 
-  
+
   <!-- Header -->
   <header class="header">
     <nav class="navbar">
-      <div class="logo">Braids Monique</div>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+      <a href="/index.html" class="logo-link">
+        <span class="logo">Ailane Barbosa</span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        ☰
+      </button>
+
       <ul class="nav-links" id="nav-links">
-        <li><a href="../index.html#sobre">Sobre Mim</a></li>
-        <li><a href="../index.html#portfolio">Portfólio</a></li>
-        <li><a href="../index.html#contato">Contato</a></li>
-        <li><a href="#agendamento">Agendar</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="agendar.html">Agendamento</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Formulário de Agendamento -->
-  <section class="agendamento">
+  <section class="agendamento" id="agendamento">
     <div class="agendamento-container">
-      <h2>Agende sua Trança</h2>
-
+      <h2>Agende seu procedimento</h2>
       <form onsubmit="enviarParaWhatsapp(); return false;">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" required>
+        <input type="text" id="nome" required />
 
         <label for="data">Data:</label>
-        <input type="date" id="data" required>
+        <input type="date" id="data" required />
         <p id="mensagem-data" class="mensagem-erro" style="display: none;"></p>
 
-        <label for="horario">Horário:</label>
+        <!-- <label for="horario">Horário:</label>
         <select id="horario" required>
           <option value="">Selecione um horário</option>
           <option>08:00</option>
@@ -47,13 +51,19 @@
           <option>13:00</option>
           <option>15:00</option>
           <option>17:00</option>
+        </select> -->
+
+        <label for="servico">Serviço:</label>
+        <select id="servico" required>
+          <option value="">Selecione</option>
+          <option>Design de Sobrancelhas</option>
+          <option>Sobrancelha com Henna</option>
+          <option>Depilação</option>
+          <option>Manicure</option>
         </select>
 
-        <label for="modelo">Modelo de Trança:</label>
-        <input type="text" id="modelo" required>
-
         <!-- <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" required> -->
+        <input type="tel" id="telefone" required /> -->
 
         <label for="pagamento">Pagamento:</label>
         <select id="pagamento" required>
@@ -62,15 +72,19 @@
           <option>Débito</option>
           <option>Credito</option>
           <option>Dinheiro</option>
-   
+
         </select>
 
-        <label for="referencia">Foto de Referência (opcional):</label>
+        <!-- <label for="referencia">Foto de Referência (opcional):</label>
         <input type="file" id="referencia" accept="image/*" />
-        <small>Se voce enviou a foto de referencia, por favor envia-la pelo whatsapp após o agendamento</small>
+        <small>Se voce enviou a foto de referencia, por favor envia-la pelo whatsapp após o agendamento</small> -->
 
 
         <button type="submit">Agendar via WhatsApp</button>
+        <small>
+          Após enviar o formulário, informe no WhatsApp o horário de preferência para verificar a disponibilidade.
+        </small>
+
       </form>
     </div>
   </section>
@@ -80,41 +94,100 @@
     <img src="/img/whatsapp_logo.png" alt="WhatsApp" />
   </a>
 
+  <!-- Contato -->
+  <footer class="contato">
+    <div class="footer-container">
+      <h2>Contatos</h2>
+
+      <p class="endereco">
+        📍 Rua Botafogo, 886 – Menino Deus<br>
+        Porto Alegre – RS
+      </p>
+
+      <div class="redes">
+        <a href="https://wa.me/55599999999999" target="_blank">WhatsApp: 56565</a>
+        <a href="https://instagram.com/" target="_blank">Instagram: fgfgfg</a>
+        <a href="https://" target="_blank">Gmail: rtyth</a>
+      </div>
+    </div>
+  </footer>
+
+
   <script>
-  // Bloqueia domingos
-  const dataInput = document.getElementById("data");
-  const mensagemData = document.getElementById("mensagem-data");
+    /* ================= MENU MOBILE ================= */
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
 
-  dataInput.addEventListener("input", function () {
-    const dataSelecionada = new Date(this.value);
-    const diaSemana = dataSelecionada.getUTCDay(); // 0 = domingo
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
 
-    if (diaSemana === 0) {
-      mensagemData.textContent = "⚠️ A trancista não atende aos domingos. Por favor, escolha outro dia.";
-      mensagemData.style.display = "block";
-      this.value = "";
-    } else {
+
+    // Bloqueia domingos e sabados
+    const dataInput = document.getElementById("data");
+    const mensagemData = document.getElementById("mensagem-data");
+
+    dataInput.addEventListener("input", function () {
+      if (!this.value) return;
+
+      // Data selecionada
+      const dataSelecionada = new Date(this.value + "T00:00:00");
+
+      // Data de hoje
+      const hoje = new Date();
+      hoje.setHours(0, 0, 0, 0);
+
+      const diaSemana = dataSelecionada.getDay(); // 6 = sábado
+
+      // 🔴 Bloqueia datas passadas
+      if (dataSelecionada < hoje) {
+        mensagemData.textContent =
+          "⚠️ Não é possível agendar para datas passadas.";
+        mensagemData.style.display = "block";
+        this.value = "";
+        return;
+      }
+
+      // 🔴 Bloqueia SOMENTE domingo
+      if (diaSemana === 0) {
+        mensagemData.textContent =
+          "⚠️ Não atendemos aos domingos. Escolha outra data.";
+        mensagemData.style.display = "block";
+        this.value = "";
+        return;
+      }
+
+      // ✅ Data válida
       mensagemData.style.display = "none";
       mensagemData.textContent = "";
+    });
+
+    function enviarParaWhatsapp() {
+      const nome = document.getElementById("nome").value;
+      const dataInput = document.getElementById("data").value;
+      const servico = document.getElementById("servico").value;
+      const pagamento = document.getElementById("pagamento").value;
+
+      // Converte YYYY-MM-DD → DD/MM/YYYY
+      const [ano, mes, dia] = dataInput.split("-");
+      const dataFormatada = `${dia}/${mes}/${ano}`;
+
+      const numeroTrancista = "5551999999999"; // Substituir pelo número real
+
+      const mensagem =
+        `Olá! Gostaria de agendar um serviço\n\n` +
+        `Nome: ${nome}\n` +
+        `Data: ${dataFormatada}\n` +
+        `Serviço: ${servico}\n` +
+        `Forma de pagamento: ${pagamento}`;
+
+      const link = `https://wa.me/${numeroTrancista}?text=${encodeURIComponent(mensagem)}`;
+      window.open(link, "_blank");
     }
-  });
-
-  function enviarParaWhatsapp() {
-    const nome = document.getElementById("nome").value;
-    const data = document.getElementById("data").value;
-    const horario = document.getElementById("horario").value;
-    const modelo = document.getElementById("modelo").value;
-    const pagamento = document.getElementById("pagamento").value;
-   
-
-    const numeroTrancista = "5551985045988"; // Substituir pelo número real
-
-    let mensagem = `Olá! Gostaria de agendar uma trança:\n\nNome: ${nome}\nData: ${data}\nHorário: ${horario}\nModelo: ${modelo}\nPagamento: ${pagamento}`;
+  </script>
 
 
-    const link = `https://wa.me/${numeroTrancista}?text=${encodeURIComponent(mensagem)}`;
-    window.open(link, "_blank");
-  }
-</script>
+  </script>
 </body>
+
 </html>

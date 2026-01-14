@@ -5,6 +5,9 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
 }
 
 .navbar {
@@ -17,11 +20,37 @@
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 1.9rem;
+  font-weight: 700;
   color: #e91e63;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1;
 }
+
+.logo::after {
+  content: "Designer de Sombrancelha - Depiladora - Manicure";
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: .4px;
+  margin-top: 4px;
+  color: #c2185b;
+  font-weight: 500;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-link:visited {
+  color: inherit;
+}
+
+.logo-link:hover {
+  color: inherit;
+}
+
 
 .nav-links {
   list-style: none;
@@ -33,8 +62,26 @@
   text-decoration: none;
   font-weight: 500;
   color: #333;
+  position: relative;
   transition: color 0.3s ease;
 }
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e91e63;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
 
 .nav-links a:hover {
   color: #c2185b;
@@ -48,13 +95,85 @@
   border: none;
   cursor: pointer;
   color: #333;
+  transition: transform 0.3s ease;
 }
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* botão /* ================= FOOTER ================= */
+
+footer {
+  width: 100%;
+  background: linear-gradient(135deg, #fde4ec, #fff);
+  padding: 24px 0;
+  border-top: 2px solid #f8bbd0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* redes */
+footer .redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+
+footer .redes a {
+  text-decoration: none;
+  color: #c2185b;
+  font-weight: 600;
+}
+
+footer .redes a:hover {
+  color: #e91e63;
+}
+
+/* REMOVE AZUL PADRÃO */
+footer a,
+footer a:visited,
+footer a:active {
+  color: #c2185b;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-  }}
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 0.5rem;
+  }
+}
+
 
 body {
   font-family: Arial, sans-serif;
