@@ -15,16 +15,19 @@
   <!-- Header -->
   <header class="header">
     <nav class="navbar">
+      <img src="/img/logo_header.png" class="logo-img" srcset="">
+
       <a href="/index.html" class="logo-link">
-        <span class="logo">Ailane Barbosa</span>
+        <span class="logo">Estética Ailane</span>
       </a>
 
       <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
         ☰
       </button>
 
+      <div class="espaco"></div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
         <li><a href="galeria.html">Galeria</a></li>
         <li><a href="agendar.html">Agendamento</a></li>
       </ul>
@@ -39,9 +42,9 @@
         <label for="nome">Nome:</label>
         <input type="text" id="nome" required />
 
-        <label for="data">Data:</label>
+        <!-- <label for="data">Data:</label>
         <input type="date" id="data" required />
-        <p id="mensagem-data" class="mensagem-erro" style="display: none;"></p>
+        <p id="mensagem-data" class="mensagem-erro" style="display: none;"></p> -->
 
         <!-- <label for="horario">Horário:</label>
         <select id="horario" required>
@@ -123,44 +126,44 @@
     });
 
 
-    // Bloqueia domingos e sabados
-    const dataInput = document.getElementById("data");
-    const mensagemData = document.getElementById("mensagem-data");
+    // // Bloqueia domingos e sabados
+    // const dataInput = document.getElementById("data");
+    // const mensagemData = document.getElementById("mensagem-data");
 
-    dataInput.addEventListener("input", function () {
-      if (!this.value) return;
+    // dataInput.addEventListener("input", function () {
+    //   if (!this.value) return;
 
-      // Data selecionada
-      const dataSelecionada = new Date(this.value + "T00:00:00");
+    //   // Data selecionada
+    //   const dataSelecionada = new Date(this.value + "T00:00:00");
 
-      // Data de hoje
-      const hoje = new Date();
-      hoje.setHours(0, 0, 0, 0);
+    //   // Data de hoje
+    //   const hoje = new Date();
+    //   hoje.setHours(0, 0, 0, 0);
 
-      const diaSemana = dataSelecionada.getDay(); // 6 = sábado
+    //   const diaSemana = dataSelecionada.getDay(); // 6 = sábado
 
-      // 🔴 Bloqueia datas passadas
-      if (dataSelecionada < hoje) {
-        mensagemData.textContent =
-          "⚠️ Não é possível agendar para datas passadas.";
-        mensagemData.style.display = "block";
-        this.value = "";
-        return;
-      }
+    //   // 🔴 Bloqueia datas passadas
+    //   if (dataSelecionada < hoje) {
+    //     mensagemData.textContent =
+    //       "⚠️ Não é possível agendar para datas passadas.";
+    //     mensagemData.style.display = "block";
+    //     this.value = "";
+    //     return;
+    //   }
 
-      // 🔴 Bloqueia SOMENTE domingo
-      if (diaSemana === 0) {
-        mensagemData.textContent =
-          "⚠️ Não atendemos aos domingos. Escolha outra data.";
-        mensagemData.style.display = "block";
-        this.value = "";
-        return;
-      }
+    //   // 🔴 Bloqueia SOMENTE domingo
+    //   if (diaSemana === 0) {
+    //     mensagemData.textContent =
+    //       "⚠️ Não atendemos aos domingos. Escolha outra data.";
+    //     mensagemData.style.display = "block";
+    //     this.value = "";
+    //     return;
+    //   }
 
-      // ✅ Data válida
-      mensagemData.style.display = "none";
-      mensagemData.textContent = "";
-    });
+    //   // ✅ Data válida
+    //   mensagemData.style.display = "none";
+    //   mensagemData.textContent = "";
+    // });
 
     function enviarParaWhatsapp() {
       const nome = document.getElementById("nome").value;

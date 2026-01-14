@@ -13,14 +13,17 @@
 
   <header class="header">
     <nav class="navbar">
+      <img src="/img/logo_header.png" class="logo-img" srcset="">
+
       <a href="/index.html" class="logo-link">
-        <span class="logo">Ailane Barbosa</span>
+        <span class="logo">Estética Ailane</span>
       </a>
 
       <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
         ☰
       </button>
 
+      <div class="espaco"></div>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="pages/galeria.html">Galeria</a></li>
@@ -53,7 +56,7 @@
         </p>
       </div>
       <div class="sobre-imagem">
-        <img src="/img/trancas/tranca1.png" alt="Foto da transista Evelyn">
+        <img src="/img/servicos//fotos_ailane/fotoailane.jpg" alt="Foto da Ailane">
       </div>
     </div>
   </section>
@@ -67,9 +70,9 @@
     </div>
 
     <div class="galeria">
-      <img src="/img/trancas/tranca1.png" alt="Trança 1">
-      <img src="/img/trancas/tranca1.png"" alt=" Trança 2">
-      <img src="/img/trancas/tranca1.png"" alt=" Trança 3">
+      <img src="/img/servicos/tranca1.png" alt="Trança 1">
+      <img src="/img/servicos/tranca1.png"" alt=" Trança 2">
+      <img src="/img/servicos/tranca1.png"" alt=" Trança 3">
     </div>
   </section>
 
@@ -81,9 +84,9 @@
         <label for="nome">Nome:</label>
         <input type="text" id="nome" required />
 
-        <label for="data">Data:</label>
+        <!-- <label for="data">Data:</label>
         <input type="date" id="data" required />
-        <p id="mensagem-data" class="mensagem-erro" style="display: none;"></p>
+        <p id="mensagem-data" class="mensagem-erro" style="display: none;"></p> -->
 
         <!-- <label for="horario">Horário:</label>
         <select id="horario" required>
@@ -98,10 +101,57 @@
         <label for="servico">Serviço:</label>
         <select id="servico" required>
           <option value="">Selecione</option>
-          <option>Design de Sobrancelhas</option>
-          <option>Sobrancelha com Henna</option>
-          <option>Depilação</option>
-          <option>Manicure</option>
+          <option>Esmaltação em Gel</option>
+          <option>Blindagem</option>
+          <option>Banho de Gel</option>
+          <option>Abdômen Masculino</option>
+          <option>Aplicação de Henha</option>
+          <option>Aplicação de Tintura</option>
+          <option>Axila</option>
+          <option>Axila Masculina</option>
+          <option>Braço Masculino</option>
+          <option>Braço Feminino</option>
+          <option>Cortes de Unhas (mão)</option>
+          <option>Cortes de Unhas (pé)</option>
+          <option>Costa Feminina</option>
+          <option>Costa Masculino</option>
+          <option>Coxa Masculino</option>
+          <option>Dedo</option>
+          <option>Depilação de Coxa</option>
+          <option>Depilação de Coxa Atrás</option>
+          <option>Depilação de Orelhas</option>
+          <option>Designer de Sobrancelha</option>
+          <option>Epilação Facial de Queixo</option>
+          <option>Epilação de Buço</option>
+          <option>Epilação Facial Completa</option>
+          <option>Francesinha</option>
+          <option>Mão</option>
+          <option>Mão com Francesinha</option>
+          <option>Mão Tradicional sem Cutículagem</option>
+          <option>Mão e Pé Tradicional</option>
+          <option>Meia Perna</option>
+          <option>Meia Perna Masculino</option>
+          <option>Nádegas</option>
+          <option>Nariz</option>
+          <option>Pé</option>
+          <option>Pé com Francesinha</option>
+          <option>Pé Tradicional sem Cutículagem</option>
+          <option>Perna Inteira</option>
+          <option>Pescoço</option>
+          <option>Pintura de Unhas (Pés)</option>
+          <option>Pintura de Unhas (Mãos)</option>
+          <option>Sobrancelha com Henma</option>
+          <option>Sobrancelha com Tintura</option>
+          <option>SPA dos Pés Completo</option>
+          <option>Suiça</option>
+          <option>Tórax Feminino</option>
+          <option>Tórax Masculino</option>
+          <option>Tórax + Abdômen</option>
+          <option>Virilha Simples</option>
+          <option>Virilha Total</option>
+
+
+
         </select>
 
         <!-- <label for="telefone">Telefone:</label>
@@ -144,7 +194,7 @@
   </section>
 
 
-  <a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp">
+  <a href="https://wa.me/5551999828359" class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp">
     <img src="/img/whatsapp_logo.png" target="_blank" alt="WhatsApp" />
   </a>
 
@@ -160,7 +210,7 @@
       </p>
 
       <div class="redes">
-        <a href="https://wa.me/55599999999999" target="_blank">WhatsApp: 56565</a>
+        <a href="https://wa.me/5551999828359" target="_blank">WhatsApp: 5551999828359</a>
         <a href="https://instagram.com/" target="_blank">Instagram: fgfgfg</a>
         <a href="https://" target="_blank">Gmail: rtyth</a>
       </div>
@@ -183,43 +233,43 @@
     navLinks.classList.toggle("active");
   });
 
-  /* ================= BLOQUEIO DE DATA ================= */
-  const dataInput = document.getElementById("data");
-  const mensagemData = document.getElementById("mensagem-data");
+  // /* ================= BLOQUEIO DE DATA ================= */
+  // const dataInput = document.getElementById("data");
+  // const mensagemData = document.getElementById("mensagem-data");
 
-  if (dataInput) {
-    dataInput.addEventListener("input", function () {
-      if (!this.value) return;
+  // if (dataInput) {
+  //   dataInput.addEventListener("input", function () {
+  //     if (!this.value) return;
 
-      const dataSelecionada = new Date(this.value + "T00:00:00");
-      const hoje = new Date();
-      hoje.setHours(0, 0, 0, 0);
+  //     const dataSelecionada = new Date(this.value + "T00:00:00");
+  //     const hoje = new Date();
+  //     hoje.setHours(0, 0, 0, 0);
 
-      const diaSemana = dataSelecionada.getDay(); // 6 = sábado
+  //     const diaSemana = dataSelecionada.getDay(); // 6 = sábado
 
-      // 🔴 Bloqueia datas passadas
-      if (dataSelecionada < hoje) {
-        mensagemData.textContent =
-          "⚠️ Não é possível agendar para datas passadas.";
-        mensagemData.style.display = "block";
-        this.value = "";
-        return;
-      }
+  //     // 🔴 Bloqueia datas passadas
+  //     if (dataSelecionada < hoje) {
+  //       mensagemData.textContent =
+  //         "⚠️ Não é possível agendar para datas passadas.";
+  //       mensagemData.style.display = "block";
+  //       this.value = "";
+  //       return;
+  //     }
 
-      // 🔴 Bloqueia somente domingo
-      if (diaSemana === 0) {
-        mensagemData.textContent =
-          "⚠️ Não atendemos aos domingos. Escolha outra data.";
-        mensagemData.style.display = "block";
-        this.value = "";
-        return;
-      }
+  //     // 🔴 Bloqueia somente domingo
+  //     if (diaSemana === 0) {
+  //       mensagemData.textContent =
+  //         "⚠️ Não atendemos aos domingos. Escolha outra data.";
+  //       mensagemData.style.display = "block";
+  //       this.value = "";
+  //       return;
+  //     }
 
-      // ✅ Data válida
-      mensagemData.style.display = "none";
-      mensagemData.textContent = "";
-    });
-  }
+  //     // ✅ Data válida
+  //     mensagemData.style.display = "none";
+  //     mensagemData.textContent = "";
+  //   });
+  // }
 
   /* ================= ENVIO WHATSAPP ================= */
   function enviarParaWhatsapp() {
@@ -232,7 +282,7 @@
     const [ano, mes, dia] = dataInputValue.split("-");
     const dataFormatada = `${dia}/${mes}/${ano}`;
 
-    const numeroTrancista = "5551999999999"; // Substituir pelo número real
+    const numeroailane = "5551999828359"; // Substituir pelo número real
 
     const mensagem =
       `Olá! Gostaria de agendar um serviço\n\n` +

@@ -1,4 +1,10 @@
 /* Estilo base, mesmo padrão do site */
+.logo-img {
+  height: 87px;
+  width: 87px;
+  display: block;
+}
+
 .header {
   background-color: #f5f5f5;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -151,6 +157,12 @@ footer a:active {
   .menu-toggle {
     display: block;
   }
+
+  @media (max-width: 768px) {
+  .logo-img {
+    height: 50px;
+  }
+}
 
   .nav-links {
     display: none;

@@ -19,11 +19,15 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: auto;
   align-items: center;
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.espaco {
+    margin-right: 100px;
 }
 
 .logo {
@@ -141,6 +145,13 @@ body {
   }
 }
 /* Conteúdo do Header */
+
+.logo-img {
+  height: 87px;
+  width: 87px;
+  display: block;
+}
+
 .header-content {
   display: flex;
   align-items: center;
@@ -303,6 +314,12 @@ section {
 @media (min-width: 600px) {
   .galeria img {
     width: calc(33.333% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    height: 50px;
   }
 }
 

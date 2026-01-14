@@ -33,6 +33,10 @@ body {
   margin: 0 auto;
 }
 
+.espaco {
+    margin-right: 100px;
+}
+
 .logo {
   font-size: 1.9rem;
   font-weight: 700;
@@ -161,6 +165,13 @@ footer a:active {
 }
 
 /* Conteúdo do header */
+
+.logo-img {
+  height: 87px;
+  width: 87px;
+  display: block;
+}
+
 .header-content {
   width: 100%;
   max-width: 1200px;
@@ -190,6 +201,12 @@ footer a:active {
   .menu-toggle {
     display: block;
   }
+
+  @media (max-width: 768px) {
+  .logo-img {
+    height: 50px;
+  }
+}
 
   .nav-links {
     display: none;
