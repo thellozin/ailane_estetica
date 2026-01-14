@@ -1,6 +1,6 @@
 const galerias = {
   Fulani: [
-    "/img/trancas/tranca1.png",
+    "/img/servicos/tranca1.png",
     "/img/trancas/tranca1.png",
   ],
     Gipsy: [
@@ -32,7 +32,7 @@ const galerias = {
 const nomesGalerias = {
   Fulani: {
     nome: "Fulani",
-    capa: "/img/trancas/tranca1.png",
+    capa: "/img/servicos/tranca1.png",
   },
   Gipsy: {
     nome: "Gipsy",
