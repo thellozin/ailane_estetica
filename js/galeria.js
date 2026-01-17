@@ -1,63 +1,111 @@
 const galerias = {
-  Fulani: [
-    "/img/servicos/tranca1.png",
-    "/img/trancas/tranca1.png",
+  Sobrancelhas_fem: [
+    "/img/sobrancelha_femenina/img1.jpeg",
+    "/img/sobrancelha_femenina/img2.jpeg",
+    "/img/sobrancelha_femenina/img3.jpeg",
+    "/img/sobrancelha_femenina/img4.jpeg",
+    "/img/sobrancelha_femenina/img5.jpeg",
+    "/img/sobrancelha_femenina/img6.jpeg",
+    "/img/sobrancelha_femenina/img7.jpeg"
+    
   ],
-    Gipsy: [
-    "/img/trancas/tranca1.png",
-    "/img/trancas/tranca1.png",
+    Unhas_mao: [
+    "/img/unhas_mao/img1.jpeg",
+    "/img/unhas_mao/img2.jpeg",
+    "/img/unhas_mao/img3.jpeg",
+    "/img/unhas_mao/img4.jpeg",
+    "/img/unhas_mao/img5.jpeg",
+    "/img/unhas_mao/img6.jpeg",
+    "/img/unhas_mao/img7.jpeg"
   ],
-  Nago: [
-    "/img/trancas/tranca1.png",
-    "/img/trancas/tranca1.png",
+
+   Unhas_pe: [
+    "/img/unhas_pe/img1.jpeg",
+    "/img/unhas_pe/img2.jpeg",
+    "/img/unhas_pe/img3.jpeg",
+    "/img/unhas_pe/img4.jpeg"
   ],
-  Box_Braids: [
-    "/img/trancas/tranca1.png",
-    "/img/trancas/tranca1.png",
+
+   sobrancela_mas: [
+    "/img/sobrancelha_masculina/img1.jpeg",
+    "/img/sobrancelha_masculina/img2.jpeg",
+    "/img/sobrancelha_masculina/img3.jpeg",
+    "/img/sobrancelha_masculina/img4.jpeg",
+    "/img/sobrancelha_masculina/img5.jpeg",
+    "/img/sobrancelha_masculina/img6.jpeg",
+    "/img/sobrancelha_masculina/img7.jpeg"
   ],
-  Knotless: [
-    "/img/trancas/tranca1.png",
-    "/img/trancas/tranca1.png",
+
+   bigode: [
+    "/img/bigode/img1.jpeg",
+    "/img/bigode/img2.jpeg",
+    "/img/bigode/img3.jpeg",
+    "/img/bigode/img4.jpeg"
   ],
-  Box_Chanel: [
-    "/img/trancas/tranca1.png",
-    "/img/trancas/tranca1.png",
+
+   depilacao: [
+    "/img/depilacao/img1.jpeg",
+    "/img/depilacao/img2.jpeg"
   ],
-  Goddes_Braids: [
-    "/img/trancas/tranca1.png",
-    "/img/trancas/tranca1.png",
+
+   epilacao_linha: [
+    "/img/epilacao_com_linha/img1.jpeg",
+    "/img/epilacao_com_linha/img2.jpeg"
   ],
+
+   antes_depois: [
+    "/img/antes_e_depois/img1.jpeg",
+    "/img/antes_e_depois/img2.jpeg",
+    "/img/antes_e_depois/img3.jpeg",
+    "/img/antes_e_depois/img4.jpeg",
+    "/img/antes_e_depois/img5.jpeg",
+    "/img/antes_e_depois/img6.jpeg",
+    "/img/antes_e_depois/img7.jpeg",
+    "/img/antes_e_depois/img8.jpeg",
+    "/img/antes_e_depois/img9.jpeg"
+  ],
+  
 };
 
 const nomesGalerias = {
-  Fulani: {
-    nome: "Fulani",
-    capa: "/img/servicos/tranca1.png",
+  Sobrancelhas_fem: {
+    nome: "Sobrancelhas Femeninas",
+    capa: "/img/sobrancelha_femenina/img1.jpeg",
   },
-  Gipsy: {
-    nome: "Gipsy",
-    capa: "/img/trancas/tranca1.png",
+ Unhas_mao: {
+    nome: "Unhas Mão",
+    capa: "/img/unhas_mao/img1.jpeg",
   },
-  Nago: {
-    nome: "Nago",
-    capa: "/img/trancas/tranca1.png",
+  
+  Unhas_pe: {
+    nome: "Unhas Pé",
+    capa: "/img/unhas_pe/img3.jpeg",
   },
-  Box_Braids: {
-    nome: "Box Braids",
-    capa: "/img/trancas/tranca1.png",
+
+  sobrancela_mas: {
+    nome: "Sobrancelha Masculina",
+    capa: "/img/sobrancelha_masculina/img5.jpeg",
   },
-  Knotless: {
-    nome: "Knotless",
-    capa: "/img/trancas/tranca1.png",
+
+  bigode: {
+    nome: "Bigode",
+    capa: "/img/bigode/img3.jpeg",
   },
-  Box_Chanel: {
-    nome: "Box Chanel",
-    capa: "/img/trancas/tranca1.png",
+
+  depilacao: {
+    nome: "Depilação",
+    capa: "/img/depilacao/img2.jpeg",
   },
-  Goddes_Braids: {
-    nome: "Goddes Braids",
-    capa: "/img/trancas/tranca1.png",
-  }
+
+  epilacao_linha: {
+    nome: "Epilação com Linha",
+    capa: "/img/epilacao_com_linha/img2.jpeg",
+  },
+
+  antes_depois: {
+    nome: "Antes e Depois",
+    capa: "/img/antes_e_depois/img9.jpeg",
+  },
 };
 
 function getQueryParam(param) {
