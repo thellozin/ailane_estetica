@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ailane Barbosa</title>
+  <title>Estética Ailane</title>
 
   <!-- CSS DO SWIPER (OBRIGATÓRIO) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -37,7 +37,7 @@
       </ul>
       <div class="header-contato">
         
-        <a href="https://www.instagram.com/seuinstagram" target="_blank" class="btn-instagram">
+        <a href="https://www.instagram.com/ailanebarbosaoficial" target="_blank" class="btn-instagram">
           <img src="img/instagram_logo.png" alt="Instagram">
         </a>
           <div class="espaco_redes"></div>
@@ -69,7 +69,7 @@
       <div class="sobre-texto">
         <h2>Sobre Mim</h2>
         <p>
-          Olá! Sou a <strong>Ailane</strong>, especialista em estética à <strong>8 anos</strong>.
+          Olá! Sou a <strong>Ailane</strong>, especialista em estética à <strong>13 anos</strong>.
           Acredito que cada cuidado uma obra de arte única, feita com dedicação, técnica e muito amor.
         </p>
         <p>
@@ -163,6 +163,49 @@
       <div class="clinic-pagination"></div>
     </div>
   </section>
+
+  <!-- videos -->
+
+  <!-- Vídeos -->
+<section class="videos-section">
+  <h2 class="videos-title">
+    Procedimentos em <span>Vídeo</span>
+  </h2>
+
+  <p class="videos-subtitle">
+    Confira alguns momentos dos nossos atendimentos e resultados.
+  </p>
+
+  <div class="swiper videos-swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide video-slide">
+        <video controls muted playsinline>
+          <source src="videos/video1.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+
+      <div class="swiper-slide video-slide">
+        <video controls muted playsinline>
+          <source src="videos/video2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="swiper-slide video-slide">
+        <video controls muted playsinline>
+          <source src="videos/video3.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+
+    <div class="swiper-button-prev videos-prev"></div>
+    <div class="swiper-button-next videos-next"></div>
+    <div class="videos-pagination"></div>
+  </div>
+</section>
+
 
 
   <!-- Swiper JS -->
@@ -337,8 +380,8 @@
 
       <div class="redes">
         <a href="https://wa.me/5551999828359" target="_blank">WhatsApp: 5551999828359</a>
-        <a href="https://instagram.com/" target="_blank">Instagram: fgfgfg</a>
-        <a href="https://" target="_blank">Gmail: ailanebarbosa03@gmail.com</a>
+      <a href="https://instagram.com/ailanebarbosaoficial" target="_blank">Instagram: @ailanebarbosaoficial</a>
+       <a href="https://" target="_blank">Gmail: ailanebarbosa03@gmail.com</a>
       </div>
     </div>
   </footer>
@@ -448,6 +491,33 @@
       },
     },
   });
+
+  // videos do servico
+
+  const videosSwiper = new Swiper('.videos-swiper', {
+  loop: true,
+  spaceBetween: 20,
+
+  pagination: {
+    el: '.videos-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.videos-next',
+    prevEl: '.videos-prev',
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+  },
+});
+
 
 </script>
 

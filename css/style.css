@@ -218,17 +218,17 @@ body {
 /* Conteúdo central */
 .hero-content {
   text-align: center;
-  padding: 0 20px;
+  padding: 0 200px;
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .hero-content p {
   font-size: 1.3rem;
-  margin-bottom: 30px;
+  margin-bottom: 42px;
 }
 
 
@@ -404,6 +404,36 @@ section {
   font-size: 18px;
   font-weight: bold;
 }
+
+/* ===== SETAS PERSONALIZADAS VÍDEOS ===== */
+
+.videos-prev,
+.videos-next {
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e91e63;
+  transition: all 0.3s ease;
+}
+
+.videos-prev:hover,
+.videos-next:hover {
+  background: #e91e63;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.videos-prev::after,
+.videos-next::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 
 
 
@@ -756,8 +786,9 @@ footer a:active {
 
 .agendamento {
   background: #f5f5f5;
-  padding: 2rem;
+  padding: 5rem;
   margin-top: 2rem;
+  padding-bottom: 4rem;
   
 }
 
@@ -774,16 +805,22 @@ footer a:active {
   
 }
 
+
+
 .agendamento input,
 .agendamento select,
 .agendamento button {
+  border-radius: 100px;
   padding: 10px;
+  border: 1px solid #ddd;
   font-size: 1rem;
+ 
   
 }
 
 .agendamento button {
   background-color: #e91e63;
+  border-radius: 100px;
   color: white;
   border: none;
   cursor: pointer;
@@ -804,3 +841,34 @@ html, body {
 body {
   overflow-x: hidden;
 }
+
+/* videos do index */
+
+.videos-section {
+  padding: 3rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.videos-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.videos-title span {
+  color: #e91e63;
+}
+
+.videos-subtitle {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #666;
+}
+
+.video-slide video {
+  width: 100%;
+  max-height: 450px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+

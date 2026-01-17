@@ -13,7 +13,7 @@
 
 
   <!-- Header -->
-  <header class="header">
+    <header class="header">
     <nav class="navbar">
       <img src="/img/logo_header.png" class="logo-img" srcset="">
 
@@ -31,6 +31,22 @@
         <li><a href="galeria.html">Galeria</a></li>
         <li><a href="agendar.html">Agendamento</a></li>
       </ul>
+      <div class="header-contato">
+        
+        <a href="https://www.instagram.com/ailanebarbosaoficial" target="_blank" class="btn-instagram">
+          <img src="/img/instagram_logo.png" alt="Instagram">
+        </a>
+          <div class="espaco_redes"></div>
+       <a
+  href="https://wa.me/5551999828359?text=Olá!%20Gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20atendimentos%20"
+  target="_blank"
+  class="btn-whatsapp"
+>
+  Contato WhatsApp
+</a>
+      </div>
+
+
     </nav>
   </header>
 
@@ -57,12 +73,59 @@
         </select> -->
 
         <label for="servico">Serviço:</label>
-        <select id="servico" required>
+         <select id="servico" required>
           <option value="">Selecione</option>
-          <option>Design de Sobrancelhas</option>
-          <option>Sobrancelha com Henna</option>
-          <option>Depilação</option>
-          <option>Manicure</option>
+          <option>Esmaltação em Gel</option>
+          <option>Blindagem</option>
+          <option>Banho de Gel</option>
+          <option>Abdômen Masculino</option>
+          <option>Aplicação de Henha</option>
+          <option>Aplicação de Tintura</option>
+          <option>Axila</option>
+          <option>Axila Masculina</option>
+          <option>Braço Masculino</option>
+          <option>Braço Feminino</option>
+          <option>Cortes de Unhas (mão)</option>
+          <option>Cortes de Unhas (pé)</option>
+          <option>Costa Feminina</option>
+          <option>Costa Masculino</option>
+          <option>Coxa Masculino</option>
+          <option>Dedo</option>
+          <option>Depilação de Coxa</option>
+          <option>Depilação de Coxa Atrás</option>
+          <option>Depilação de Orelhas</option>
+          <option>Designer de Sobrancelha</option>
+          <option>Epilação Facial de Queixo</option>
+          <option>Epilação de Buço</option>
+          <option>Epilação Facial Completa</option>
+          <option>Francesinha</option>
+          <option>Mão</option>
+          <option>Mão com Francesinha</option>
+          <option>Mão Tradicional sem Cutículagem</option>
+          <option>Mão e Pé Tradicional</option>
+          <option>Meia Perna</option>
+          <option>Meia Perna Masculino</option>
+          <option>Nádegas</option>
+          <option>Nariz</option>
+          <option>Pé</option>
+          <option>Pé com Francesinha</option>
+          <option>Pé Tradicional sem Cutículagem</option>
+          <option>Perna Inteira</option>
+          <option>Pescoço</option>
+          <option>Pintura de Unhas (Pés)</option>
+          <option>Pintura de Unhas (Mãos)</option>
+          <option>Sobrancelha com Henma</option>
+          <option>Sobrancelha com Tintura</option>
+          <option>SPA dos Pés Completo</option>
+          <option>Suiça</option>
+          <option>Tórax Feminino</option>
+          <option>Tórax Masculino</option>
+          <option>Tórax + Abdômen</option>
+          <option>Virilha Simples</option>
+          <option>Virilha Total</option>
+
+
+
         </select>
 
         <!-- <label for="telefone">Telefone:</label>
@@ -93,9 +156,9 @@
   </section>
 
   <!-- Botão flutuante WhatsApp -->
-  <a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp">
+  <!-- <a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp">
     <img src="/img/whatsapp_logo.png" alt="WhatsApp" />
-  </a>
+  </a> -->
 
   <!-- Contato -->
   <footer class="contato">
@@ -108,9 +171,9 @@
       </p>
 
       <div class="redes">
-        <a href="https://wa.me/55599999999999" target="_blank">WhatsApp: 56565</a>
-        <a href="https://instagram.com/" target="_blank">Instagram: fgfgfg</a>
-         <a href="https://" target="_blank">Gmail: ailanebarbosa03@gmail.com</a>
+        <a href="https://wa.me/5551999828359" target="_blank">WhatsApp: 5551999828359</a>
+      <a href="https://instagram.com/ailanebarbosaoficial" target="_blank">Instagram: @ailanebarbosaoficial</a>
+       <a href="https://" target="_blank">Gmail: ailanebarbosa03@gmail.com</a>
       </div>
     </div>
   </footer>
@@ -165,28 +228,24 @@
     //   mensagemData.textContent = "";
     // });
 
-    function enviarParaWhatsapp() {
-      const nome = document.getElementById("nome").value;
-      const dataInput = document.getElementById("data").value;
-      const servico = document.getElementById("servico").value;
-      const pagamento = document.getElementById("pagamento").value;
+   function enviarParaWhatsapp() {
+    const nome = document.getElementById("nome").value;
+    const servico = document.getElementById("servico").value;
+    const pagamento = document.getElementById("pagamento").value;
 
-      // Converte YYYY-MM-DD → DD/MM/YYYY
-      const [ano, mes, dia] = dataInput.split("-");
-      const dataFormatada = `${dia}/${mes}/${ano}`;
+    const numeroAilane = "5551999828359";
 
-      const numeroTrancista = "5551999999999"; // Substituir pelo número real
+    const mensagem =
+      `Olá! Gostaria de agendar um serviço\n\n` +
+      `Nome: ${nome}\n` +
+      `Serviço: ${servico}\n` +
+      `Forma de pagamento: ${pagamento}\n\n` +
+      `Pode me informar os horários disponíveis?`;
 
-      const mensagem =
-        `Olá! Gostaria de agendar um serviço\n\n` +
-        `Nome: ${nome}\n` +
-        `Data: ${dataFormatada}\n` +
-        `Serviço: ${servico}\n` +
-        `Forma de pagamento: ${pagamento}`;
+    const link = `https://wa.me/${numeroAilane}?text=${encodeURIComponent(mensagem)}`;
 
-      const link = `https://wa.me/${numeroTrancista}?text=${encodeURIComponent(mensagem)}`;
-      window.open(link, "_blank");
-    }
+    window.open(link, "_blank");
+  }
   </script>
 
 
