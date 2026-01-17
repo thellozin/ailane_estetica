@@ -630,8 +630,94 @@ footer a:active {
 
 /* REDES SOCIAIS */
 
+/* ================= BOTÕES CONTATO HEADER ================= */
 
-.whatsapp-float {
+
+
+.header-contato {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* empurra tudo para a direita */
+}
+
+/* Botão WhatsApp */
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* espaço EXTRA entre WhatsApp e Instagram */
+.btn-whatsapp {
+  margin-right: 24px; /* <<< ISSO resolve seu pedido */
+}
+
+.espaco_redes {
+  margin-right: 20px;
+}
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+/* Botão Instagram */
+.btn-instagram {
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.btn-instagram img {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-instagram:hover {
+  transform: scale(1.12);
+}
+
+
+@media (max-width: 768px) {
+  .header-contato {
+    gap: 12px;
+  }
+
+  .btn-whatsapp {
+    padding: 8px 14px;
+    font-size: 13px;
+    margin-right: 16px; /* menor no mobile */
+  }
+
+  .btn-instagram {
+    width: 36px;
+    height: 36px;
+  }
+
+  .btn-instagram img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+
+
+
+
+/* .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -643,7 +729,7 @@ footer a:active {
 .whatsapp-float img {
   width: 100%;
   height: auto;
-}
+} */
 
 
 
