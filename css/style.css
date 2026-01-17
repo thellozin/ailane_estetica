@@ -294,6 +294,119 @@ section {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* fotos do ambiente */
+
+/* ================= CLINIC SLIDER ================= */
+
+.clinic-section {
+  padding: 60px 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.clinic-title {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.clinic-title span {
+  font-weight: 300;
+}
+
+.clinic-subtitle {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* Swiper container */
+.clinic-swiper {
+  padding-bottom: 50px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Cada slide */
+.clinic-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Imagens */
+.clinic-slide img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.clinic-slide img {
+  max-width: 230px;
+  height: 300px;
+}
+
+
+.clinic-slide img:hover {
+  transform: scale(1.05);
+}
+
+/* Setas personalizadas */
+.clinic-next,
+.clinic-prev {
+  color: #e91e63;
+}
+
+.clinic-next::after,
+.clinic-prev::after {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Bolinhas */
+.clinic-pagination .swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+
+.clinic-pagination .swiper-pagination-bullet-active {
+  background: #e91e63;
+}
+
+/* ===== SETAS PERSONALIZADAS CLÍNICA ===== */
+
+.clinic-prev,
+.clinic-next {
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e91e63;
+  transition: all 0.3s ease;
+}
+
+.clinic-prev:hover,
+.clinic-next:hover {
+  background: #e91e63;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Tamanho do ícone da seta */
+.clinic-prev::after,
+.clinic-next::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
 /* galeria */
 
 .galeria {
@@ -385,10 +498,86 @@ section {
 }
 
 
-.localizacao iframe {
-  width: 100%;
-  border-radius: 10px;
+/* localização */
+
+.localizacao {
+  background: #f6f6f6;
+  padding: 80px 20px;
 }
+
+.localizacao-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.localizacao-texto h2 {
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.localizacao-texto h2 span {
+  color: #e91e63; /* rosa / estética */
+}
+
+.localizacao-texto p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  max-width: 420px;
+}
+
+.btn-localizacao {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #e91e63;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-localizacao:hover {
+  background: #c2185b;
+}
+
+.localizacao-mapa iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+  border-radius: 14px; /* borda arredondada */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18); /* sombra */
+}
+
+
+@media (max-width: 900px) {
+  .localizacao-container {
+    grid-template-columns: 1fr;
+  }
+
+  .localizacao-texto {
+    text-align: center;
+  }
+
+  .localizacao-texto p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.localizacao {
+  max-width: 100%;
+  padding: 100px 0;
+}
+
+
 
 
 
@@ -456,11 +645,7 @@ footer a:active {
   height: auto;
 }
 
-.localizacao-container {
-  display: flex;
-  flex-direction: column; /* empilha por padrão */
-  gap: 20px;
-}
+
 
 .mensagem-erro {
   color: #b00020;
