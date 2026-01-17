@@ -269,14 +269,6 @@ body {
   margin-top: 5px;
 }
 
-/* Ícone flutuante do WhatsApp
-
-.header-contato {
-  display: flex;
-  align-items: center;
-  margin-left: auto; /* empurra tudo para a direita */
-
-
 /* ================= WHATSAPP ================= */
 
 /* ================= BOTÕES CONTATO HEADER ================= */
@@ -360,3 +352,70 @@ body {
     height: 18px;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* Header compacto */
+  .header {
+    padding: 6px 12px;
+  }
+
+  /* Navbar simples e em linha */
+  .navbar {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  /* SOME com o título no mobile */
+  .logo-link {
+    display: none;
+  }
+
+  /* Logo imagem menor */
+  .logo-img {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Remove espaçamentos inúteis */
+  .espaco,
+  .espaco_redes {
+    display: none;
+  }
+
+  /* Contato sempre visível e compacto */
+  .header-contato {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  /* WhatsApp vira compacto */
+  .btn-whatsapp {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-right: 0;
+    white-space: nowrap;
+  }
+
+  /* Instagram compacto */
+  .btn-instagram {
+    width: 34px;
+    height: 34px;
+  }
+
+  .btn-instagram img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Menu hambúrguer visível */
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+  }
+}
+

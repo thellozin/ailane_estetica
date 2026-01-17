@@ -11,6 +11,9 @@
 
   <!-- SEU CSS -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="/img/logo_header.png" type="image/png">
+  <link rel="apple-touch-icon" href="/img/logo_header.png">
+
 </head>
 
 
@@ -224,20 +227,7 @@
 
 
 
-        <!-- <label for="data">Data:</label>
-        <input type="date" id="data" required />
-        <p id="mensagem-data" class="mensagem-erro" style="display: none;"></p> -->
-
-        <!-- <label for="horario">Horário:</label>
-        <select id="horario" required>
-          <option value="">Selecione um horário</option>
-          <option>08:00</option>
-          <option>10:00</option>
-          <option>13:00</option>
-          <option>15:00</option>
-          <option>17:00</option>
-        </select> -->
-
+        
         <label for="servico">Serviço:</label>
         <select id="servico" required>
           <option value="">Selecione</option>
@@ -294,8 +284,6 @@
 
         </select>
 
-        <!-- <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" required /> -->
 
         <label for="pagamento">Pagamento:</label>
         <select id="pagamento" required>
@@ -307,11 +295,7 @@
 
         </select>
 
-        <!-- <label for="referencia">Foto de Referência (opcional):</label>
-        <input type="file" id="referencia" accept="image/*" />
-        <small>Se voce enviou a foto de referencia, por favor envia-la pelo whatsapp após o agendamento</small> -->
-
-
+      
         <button type="submit">Agendar via WhatsApp</button>
         <small>
           Após enviar o formulário, informe no WhatsApp o horário de preferência para verificar a disponibilidade.
@@ -361,13 +345,6 @@
     </div>
   </section>
 
-
-
-  <!-- <a href="https://wa.me/5551999828359" class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp">
-    <img src="/img/whatsapp_logo.png" target="_blank" alt="WhatsApp" />
-  </a> -->
-
-
   <!-- Contato -->
   <footer class="contato">
     <div class="footer-container">
@@ -387,10 +364,6 @@
   </footer>
 
 
-
-
-
-
 </body>
 
 <script>
@@ -402,45 +375,6 @@
     navLinks.classList.toggle("active");
   });
 
-  // /* ================= BLOQUEIO DE DATA ================= */
-  // const dataInput = document.getElementById("data");
-  // const mensagemData = document.getElementById("mensagem-data");
-
-  // if (dataInput) {
-  //   dataInput.addEventListener("input", function () {
-  //     if (!this.value) return;
-
-  //     const dataSelecionada = new Date(this.value + "T00:00:00");
-  //     const hoje = new Date();
-  //     hoje.setHours(0, 0, 0, 0);
-
-  //     const diaSemana = dataSelecionada.getDay(); // 6 = sábado
-
-  //     // 🔴 Bloqueia datas passadas
-  //     if (dataSelecionada < hoje) {
-  //       mensagemData.textContent =
-  //         "⚠️ Não é possível agendar para datas passadas.";
-  //       mensagemData.style.display = "block";
-  //       this.value = "";
-  //       return;
-  //     }
-
-  //     // 🔴 Bloqueia somente domingo
-  //     if (diaSemana === 0) {
-  //       mensagemData.textContent =
-  //         "⚠️ Não atendemos aos domingos. Escolha outra data.";
-  //       mensagemData.style.display = "block";
-  //       this.value = "";
-  //       return;
-  //     }
-
-  //     // ✅ Data válida
-  //     mensagemData.style.display = "none";
-  //     mensagemData.textContent = "";
-  //   });
-  // }
-
-  /* ================= ENVIO WHATSAPP ================= */
 
   function enviarParaWhatsapp() {
     const nome = document.getElementById("nome").value;

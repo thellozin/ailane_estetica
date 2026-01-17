@@ -7,13 +7,17 @@
   <title>Agendar Procedimento</title>
   <link rel="stylesheet" href="../css/agendar.css">
 
+  <link rel="icon" href="/img/logo_header.png" type="image/png">
+  <link rel="apple-touch-icon" href="/img/logo_header.png">
+
+
 </head>
 
 <body>
 
 
   <!-- Header -->
-    <header class="header">
+  <header class="header">
     <nav class="navbar">
       <img src="/img/logo_header.png" class="logo-img" srcset="">
 
@@ -32,18 +36,15 @@
         <li><a href="agendar.html">Agendamento</a></li>
       </ul>
       <div class="header-contato">
-        
+
         <a href="https://www.instagram.com/ailanebarbosaoficial" target="_blank" class="btn-instagram">
           <img src="/img/instagram_logo.png" alt="Instagram">
         </a>
-          <div class="espaco_redes"></div>
-       <a
-  href="https://wa.me/5551999828359?text=Olá!%20Gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20atendimentos%20"
-  target="_blank"
-  class="btn-whatsapp"
->
-  Contato WhatsApp
-</a>
+        <div class="espaco_redes"></div>
+        <a href="https://wa.me/5551999828359?text=Olá!%20Gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20atendimentos%20"
+          target="_blank" class="btn-whatsapp">
+          Contato WhatsApp
+        </a>
       </div>
 
 
@@ -58,22 +59,8 @@
         <label for="nome">Nome:</label>
         <input type="text" id="nome" required />
 
-        <!-- <label for="data">Data:</label>
-        <input type="date" id="data" required />
-        <p id="mensagem-data" class="mensagem-erro" style="display: none;"></p> -->
-
-        <!-- <label for="horario">Horário:</label>
-        <select id="horario" required>
-          <option value="">Selecione um horário</option>
-          <option>08:00</option>
-          <option>10:00</option>
-          <option>13:00</option>
-          <option>15:00</option>
-          <option>17:00</option>
-        </select> -->
-
         <label for="servico">Serviço:</label>
-         <select id="servico" required>
+        <select id="servico" required>
           <option value="">Selecione</option>
           <option>Esmaltação em Gel</option>
           <option>Blindagem</option>
@@ -128,8 +115,6 @@
 
         </select>
 
-        <!-- <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" required /> -->
 
         <label for="pagamento">Pagamento:</label>
         <select id="pagamento" required>
@@ -141,10 +126,6 @@
 
         </select>
 
-        <!-- <label for="referencia">Foto de Referência (opcional):</label>
-        <input type="file" id="referencia" accept="image/*" />
-        <small>Se voce enviou a foto de referencia, por favor envia-la pelo whatsapp após o agendamento</small> -->
-
 
         <button type="submit">Agendar via WhatsApp</button>
         <small>
@@ -155,10 +136,6 @@
     </div>
   </section>
 
-  <!-- Botão flutuante WhatsApp -->
-  <!-- <a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank" aria-label="Abrir WhatsApp">
-    <img src="/img/whatsapp_logo.png" alt="WhatsApp" />
-  </a> -->
 
   <!-- Contato -->
   <footer class="contato">
@@ -172,8 +149,8 @@
 
       <div class="redes">
         <a href="https://wa.me/5551999828359" target="_blank">WhatsApp: 5551999828359</a>
-      <a href="https://instagram.com/ailanebarbosaoficial" target="_blank">Instagram: @ailanebarbosaoficial</a>
-       <a href="https://" target="_blank">Gmail: ailanebarbosa03@gmail.com</a>
+        <a href="https://instagram.com/ailanebarbosaoficial" target="_blank">Instagram: @ailanebarbosaoficial</a>
+        <a href="https://" target="_blank">Gmail: ailanebarbosa03@gmail.com</a>
       </div>
     </div>
   </footer>
@@ -189,63 +166,25 @@
     });
 
 
-    // // Bloqueia domingos e sabados
-    // const dataInput = document.getElementById("data");
-    // const mensagemData = document.getElementById("mensagem-data");
 
-    // dataInput.addEventListener("input", function () {
-    //   if (!this.value) return;
+    function enviarParaWhatsapp() {
+      const nome = document.getElementById("nome").value;
+      const servico = document.getElementById("servico").value;
+      const pagamento = document.getElementById("pagamento").value;
 
-    //   // Data selecionada
-    //   const dataSelecionada = new Date(this.value + "T00:00:00");
+      const numeroAilane = "5551999828359";
 
-    //   // Data de hoje
-    //   const hoje = new Date();
-    //   hoje.setHours(0, 0, 0, 0);
+      const mensagem =
+        `Olá! Gostaria de agendar um serviço\n\n` +
+        `Nome: ${nome}\n` +
+        `Serviço: ${servico}\n` +
+        `Forma de pagamento: ${pagamento}\n\n` +
+        `Pode me informar os horários disponíveis?`;
 
-    //   const diaSemana = dataSelecionada.getDay(); // 6 = sábado
+      const link = `https://wa.me/${numeroAilane}?text=${encodeURIComponent(mensagem)}`;
 
-    //   // 🔴 Bloqueia datas passadas
-    //   if (dataSelecionada < hoje) {
-    //     mensagemData.textContent =
-    //       "⚠️ Não é possível agendar para datas passadas.";
-    //     mensagemData.style.display = "block";
-    //     this.value = "";
-    //     return;
-    //   }
-
-    //   // 🔴 Bloqueia SOMENTE domingo
-    //   if (diaSemana === 0) {
-    //     mensagemData.textContent =
-    //       "⚠️ Não atendemos aos domingos. Escolha outra data.";
-    //     mensagemData.style.display = "block";
-    //     this.value = "";
-    //     return;
-    //   }
-
-    //   // ✅ Data válida
-    //   mensagemData.style.display = "none";
-    //   mensagemData.textContent = "";
-    // });
-
-   function enviarParaWhatsapp() {
-    const nome = document.getElementById("nome").value;
-    const servico = document.getElementById("servico").value;
-    const pagamento = document.getElementById("pagamento").value;
-
-    const numeroAilane = "5551999828359";
-
-    const mensagem =
-      `Olá! Gostaria de agendar um serviço\n\n` +
-      `Nome: ${nome}\n` +
-      `Serviço: ${servico}\n` +
-      `Forma de pagamento: ${pagamento}\n\n` +
-      `Pode me informar os horários disponíveis?`;
-
-    const link = `https://wa.me/${numeroAilane}?text=${encodeURIComponent(mensagem)}`;
-
-    window.open(link, "_blank");
-  }
+      window.open(link, "_blank");
+    }
   </script>
 
 
