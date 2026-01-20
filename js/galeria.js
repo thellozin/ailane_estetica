@@ -1,68 +1,68 @@
 const galerias = {
   Sobrancelhas_fem: [
-    "/img/sobrancelha_femenina/img1.jpeg",
-    "/img/sobrancelha_femenina/img2.jpeg",
-    "/img/sobrancelha_femenina/img3.jpeg",
-    "/img/sobrancelha_femenina/img4.jpeg",
-    "/img/sobrancelha_femenina/img5.jpeg",
-    "/img/sobrancelha_femenina/img6.jpeg",
-    "/img/sobrancelha_femenina/img7.jpeg"
+    "../img/sobrancelha_femenina/img1.jpeg",
+    "../img/sobrancelha_femenina/img2.jpeg",
+    "../img/sobrancelha_femenina/img3.jpeg",
+    "../img/sobrancelha_femenina/img4.jpeg",
+    "../img/sobrancelha_femenina/img5.jpeg",
+    "../img/sobrancelha_femenina/img6.jpeg",
+    "../img/sobrancelha_femenina/img7.jpeg"
     
   ],
     Unhas_mao: [
-    "/img/unhas_mao/img1.jpeg",
-    "/img/unhas_mao/img2.jpeg",
-    "/img/unhas_mao/img3.jpeg",
-    "/img/unhas_mao/img4.jpeg",
-    "/img/unhas_mao/img5.jpeg",
-    "/img/unhas_mao/img6.jpeg",
-    "/img/unhas_mao/img7.jpeg"
+    "../img/unhas_mao/img1.jpeg",
+    "../img/unhas_mao/img2.jpeg",
+    "../img/unhas_mao/img3.jpeg",
+    "../img/unhas_mao/img4.jpeg",
+    "../img/unhas_mao/img5.jpeg",
+    "../img/unhas_mao/img6.jpeg",
+    "../img/unhas_mao/img7.jpeg"
   ],
 
    Unhas_pe: [
-    "/img/unhas_pe/img1.jpeg",
-    "/img/unhas_pe/img2.jpeg",
-    "/img/unhas_pe/img3.jpeg",
-    "/img/unhas_pe/img4.jpeg"
+    "../img/unhas_pe/img1.jpeg",
+    "../img/unhas_pe/img2.jpeg",
+    "../img/unhas_pe/img3.jpeg",
+    "../img/unhas_pe/img4.jpeg"
   ],
 
    sobrancela_mas: [
-    "/img/sobrancelha_masculina/img1.jpeg",
-    "/img/sobrancelha_masculina/img2.jpeg",
-    "/img/sobrancelha_masculina/img3.jpeg",
-    "/img/sobrancelha_masculina/img4.jpeg",
-    "/img/sobrancelha_masculina/img5.jpeg",
-    "/img/sobrancelha_masculina/img6.jpeg",
-    "/img/sobrancelha_masculina/img7.jpeg"
+    "../img/sobrancelha_masculina/img1.jpeg",
+    "../img/sobrancelha_masculina/img2.jpeg",
+    "../img/sobrancelha_masculina/img3.jpeg",
+    "../img/sobrancelha_masculina/img4.jpeg",
+    "../img/sobrancelha_masculina/img5.jpeg",
+    "../img/sobrancelha_masculina/img6.jpeg",
+    "../img/sobrancelha_masculina/img7.jpeg"
   ],
 
    bigode: [
-    "/img/bigode/img1.jpeg",
-    "/img/bigode/img2.jpeg",
-    "/img/bigode/img3.jpeg",
-    "/img/bigode/img4.jpeg"
+    "../img/bigode/img1.jpeg",
+    "../img/bigode/img2.jpeg",
+    "../img/bigode/img3.jpeg",
+    "../img/bigode/img4.jpeg"
   ],
 
    depilacao: [
-    "/img/depilacao/img1.jpeg",
-    "/img/depilacao/img2.jpeg"
+    "../img/depilacao/img1.jpeg",
+    "../img/depilacao/img2.jpeg"
   ],
 
    epilacao_linha: [
-    "/img/epilacao_com_linha/img1.jpeg",
-    "/img/epilacao_com_linha/img2.jpeg"
+    "../img/epilacao_com_linha/img1.jpeg",
+    "../img/epilacao_com_linha/img2.jpeg"
   ],
 
    antes_depois: [
-    "/img/antes_e_depois/img1.jpeg",
-    "/img/antes_e_depois/img2.jpeg",
-    "/img/antes_e_depois/img3.jpeg",
-    "/img/antes_e_depois/img4.jpeg",
-    "/img/antes_e_depois/img5.jpeg",
-    "/img/antes_e_depois/img6.jpeg",
-    "/img/antes_e_depois/img7.jpeg",
-    "/img/antes_e_depois/img8.jpeg",
-    "/img/antes_e_depois/img9.jpeg"
+    "../img/antes_e_depois/img1.jpeg",
+    "../img/antes_e_depois/img2.jpeg",
+    "../img/antes_e_depois/img3.jpeg",
+    "../img/antes_e_depois/img4.jpeg",
+    "../img/antes_e_depois/img5.jpeg",
+    "../img/antes_e_depois/img6.jpeg",
+    "../img/antes_e_depois/img7.jpeg",
+    "../img/antes_e_depois/img8.jpeg",
+    "../img/antes_e_depois/img9.jpeg"
   ],
   
 };
@@ -70,41 +70,41 @@ const galerias = {
 const nomesGalerias = {
   Sobrancelhas_fem: {
     nome: "Sobrancelhas Femeninas",
-    capa: "/img/sobrancelha_femenina/img1.jpeg",
+    capa: "../img/sobrancelha_femenina/img1.jpeg",
   },
  Unhas_mao: {
     nome: "Unhas Mão",
-    capa: "/img/unhas_mao/img1.jpeg",
+    capa: "../img/unhas_mao/img1.jpeg",
   },
   
   Unhas_pe: {
     nome: "Unhas Pé",
-    capa: "/img/unhas_pe/img3.jpeg",
+    capa: "../img/unhas_pe/img3.jpeg",
   },
 
   sobrancela_mas: {
     nome: "Sobrancelha Masculina",
-    capa: "/img/sobrancelha_masculina/img5.jpeg",
+    capa: "../img/sobrancelha_masculina/img5.jpeg",
   },
 
   bigode: {
     nome: "Bigode",
-    capa: "/img/bigode/img3.jpeg",
+    capa: "../img/bigode/img3.jpeg",
   },
 
   depilacao: {
     nome: "Depilação",
-    capa: "/img/depilacao/img2.jpeg",
+    capa: "../img/depilacao/img2.jpeg",
   },
 
   epilacao_linha: {
     nome: "Epilação com Linha",
-    capa: "/img/epilacao_com_linha/img2.jpeg",
+    capa: "../img/epilacao_com_linha/img2.jpeg",
   },
 
   antes_depois: {
     nome: "Antes e Depois",
-    capa: "/img/antes_e_depois/img9.jpeg",
+    capa: "../img/antes_e_depois/img9.jpeg",
   },
 };
 
@@ -121,7 +121,7 @@ function mostrarGaleriaGeral() {
     div.className = "item-galeria";
 
     const link = document.createElement("a");
-    link.href = `/pages/galeria.html?id=${id}`;
+    link.href = `galeria.html?id=${id}`;
 
     const img = document.createElement("img");
     img.src = dados.capa;
