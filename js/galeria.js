@@ -3,10 +3,7 @@ const galerias = {
     "../img/sobrancelha_femenina/img1.jpeg",
     "../img/sobrancelha_femenina/img2.jpeg",
     "../img/sobrancelha_femenina/img3.jpeg",
-    "../img/sobrancelha_femenina/img4.jpeg",
-    "../img/sobrancelha_femenina/img5.jpeg",
-    "../img/sobrancelha_femenina/img6.jpeg",
-    "../img/sobrancelha_femenina/img7.jpeg"
+  
     
   ],
     Unhas_mao: [
@@ -27,19 +24,12 @@ const galerias = {
   ],
 
    sobrancela_mas: [
-    "../img/sobrancelha_masculina/img1.jpeg",
-    "../img/sobrancelha_masculina/img2.jpeg",
-    "../img/sobrancelha_masculina/img3.jpeg",
+    
     "../img/sobrancelha_masculina/img4.jpeg",
-    "../img/sobrancelha_masculina/img5.jpeg",
-    "../img/sobrancelha_masculina/img6.jpeg",
-    "../img/sobrancelha_masculina/img7.jpeg"
+    
   ],
 
    bigode: [
-    "../img/bigode/img1.jpeg",
-    "../img/bigode/img2.jpeg",
-    "../img/bigode/img3.jpeg",
     "../img/bigode/img4.jpeg"
   ],
 
@@ -48,21 +38,16 @@ const galerias = {
     "../img/depilacao/img2.jpeg"
   ],
 
-   epilacao_linha: [
-    "../img/epilacao_com_linha/img1.jpeg",
-    "../img/epilacao_com_linha/img2.jpeg"
-  ],
+  //  epilacao_linha: [
+  //   "../img/epilacao_com_linha/img1.jpeg",
+  //   "../img/epilacao_com_linha/img2.jpeg"
+  // ],
 
    antes_depois: [
     "../img/antes_e_depois/img1.jpeg",
     "../img/antes_e_depois/img2.jpeg",
     "../img/antes_e_depois/img3.jpeg",
     "../img/antes_e_depois/img4.jpeg",
-    "../img/antes_e_depois/img5.jpeg",
-    "../img/antes_e_depois/img6.jpeg",
-    "../img/antes_e_depois/img7.jpeg",
-    "../img/antes_e_depois/img8.jpeg",
-    "../img/antes_e_depois/img9.jpeg"
   ],
   
 };
@@ -84,12 +69,12 @@ const nomesGalerias = {
 
   sobrancela_mas: {
     nome: "Sobrancelha Masculina",
-    capa: "../img/sobrancelha_masculina/img5.jpeg",
+    capa: "../img/sobrancelha_masculina/img4.jpeg",
   },
 
   bigode: {
     nome: "Bigode",
-    capa: "../img/bigode/img3.jpeg",
+    capa: "../img/bigode/img4.jpeg",
   },
 
   depilacao: {
@@ -97,10 +82,10 @@ const nomesGalerias = {
     capa: "../img/depilacao/img2.jpeg",
   },
 
-  epilacao_linha: {
-    nome: "Epilação com Linha",
-    capa: "../img/epilacao_com_linha/img2.jpeg",
-  },
+  // epilacao_linha: {
+  //   nome: "Epilação com Linha",
+  //   capa: "../img/epilacao_com_linha/img2.jpeg",
+  // },
 
   antes_depois: {
     nome: "Antes e Depois",
