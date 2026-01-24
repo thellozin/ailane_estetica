@@ -29,7 +29,7 @@ const galerias = {
     
   ],
 
-   bigode: [
+   buco: [
     "../img/bigode/img4.jpeg"
   ],
 
@@ -72,8 +72,8 @@ const nomesGalerias = {
     capa: "../img/sobrancelha_masculina/img4.jpeg",
   },
 
-  bigode: {
-    nome: "Bigode",
+  buco: {
+    nome: "Buço",
     capa: "../img/bigode/img4.jpeg",
   },
 
