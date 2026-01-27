@@ -6,46 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Galeria de Fotos</title>
   <link rel="stylesheet" href="../css/galeria.css" />
-  <link rel="icon" href="../img/logo_header.png" type="image/png">
-  <link rel="apple-touch-icon" href="../img/logo_header.png">
+
+  <!-- Ícones -->
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+
 
 </head>
-  <header class="header">
-    <nav class="navbar">
-      <a href="../index.html"><img src="../img/logo_header.png" class="logo-img" srcset=""></a>
+<header class="header">
+  <nav class="navbar">
+    <a href="../index.html"><img src="../img/logo_header1.png" class="logo-img" srcset=""></a>
 
-      <a href="../index.html" class="logo-link">
-        <span class="logo">Estética Ailane</span>
+    <a href="../index.html" class="logo-link">
+      <span class="logo">Estética Ailane</span>
+    </a>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+      ☰
+    </button>
+
+    <div class="espaco"></div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="agendar.html">Agendamento</a></li>
+    </ul>
+    <div class="header-contato">
+
+      <a href="https://www.instagram.com/ailanebarbosaoficial" target="_blank" class="btn-instagram">
+        <img src="../img/instagram_logo.png" alt="Instagram">
       </a>
-
-      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
-        ☰
-      </button>
-
-      <div class="espaco"></div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="galeria.html">Galeria</a></li>
-        <li><a href="agendar.html">Agendamento</a></li>
-      </ul>
-      <div class="header-contato">
-        
-        <a href="https://www.instagram.com/ailanebarbosaoficial" target="_blank" class="btn-instagram">
-          <img src="../img/instagram_logo.png" alt="Instagram">
-        </a>
-          <div class="espaco_redes"></div>
-       <a
-  href="https://wa.me/5551999828359?text=Olá!%20Gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20atendimentos%20"
-  target="_blank"
-  class="btn-whatsapp"
->
-  Contato WhatsApp
-</a>
-      </div>
+      <div class="espaco_redes"></div>
+      <a href="https://wa.me/5551999828359?text=Olá!%20Gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20atendimentos%20"
+        target="_blank" class="btn-whatsapp">
+        Contato WhatsApp
+      </a>
+    </div>
 
 
-    </nav>
-  </header>
+  </nav>
+</header>
 
 <body>
   <h2 class="titulo-galeria">Galeria de Fotos</h2>
@@ -57,23 +60,23 @@
 
 
 
-     <!-- Contato -->
-<footer class="contato">
-  <div class="footer-container">
-    <h2>Contatos</h2>
+  <!-- Contato -->
+  <footer class="contato">
+    <div class="footer-container">
+      <h2>Contatos</h2>
 
-    <p class="endereco">
-      📍 Rua Botafogo, 886 – Menino Deus<br>
-      Porto Alegre – RS
-    </p>
+      <p class="endereco">
+        📍 Rua Botafogo, 886 – Menino Deus<br>
+        Porto Alegre – RS
+      </p>
 
-    <div class="redes">
-      <a href="https://wa.me/5551999828359" target="_blank">WhatsApp: 5551999828359</a>
-      <a href="https://instagram.com/ailanebarbosaoficial" target="_blank">Instagram: @ailanebarbosaoficial</a>
-       <a href="https://" target="_blank">Gmail: ailanebarbosa03@gmail.com</a>
+      <div class="redes">
+        <a href="https://wa.me/5551999828359" target="_blank">WhatsApp: 5551999828359</a>
+        <a href="https://instagram.com/ailanebarbosaoficial" target="_blank">Instagram: @ailanebarbosaoficial</a>
+        <a href="https://" target="_blank">Gmail: ailanebarbosa03@gmail.com</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <script>
     const menuToggle = document.getElementById("menu-toggle");
